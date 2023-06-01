@@ -1,0 +1,15 @@
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\net7.0\DataStructuresAndAlgorithms.exe
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\net7.0\DataStructuresAndAlgorithms.deps.json
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\net7.0\DataStructuresAndAlgorithms.runtimeconfig.json
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\net7.0\DataStructuresAndAlgorithms.dll
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\net7.0\DataStructuresAndAlgorithms.pdb
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.csproj.AssemblyReference.cache
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.AssemblyInfoInputs.cache
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.AssemblyInfo.cs
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.dll
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\refint\DataStructuresAndAlgorithms.dll
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.pdb
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\DataStructuresAndAlgorithms.genruntimeconfig.cache
+C:\Users\Lenovo-PC\RiderProjects\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\net7.0\ref\DataStructuresAndAlgorithms.dll
