@@ -138,4 +138,3 @@ _NCrunch*
 /.idea/.idea.*/*
 !/.idea/.idea.*/.idea
 /.idea/.idea.*/.idea/*
-!/.idea/.idea.*/.idea/runConfigurations
