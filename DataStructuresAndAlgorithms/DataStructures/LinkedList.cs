@@ -10,8 +10,8 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public bool IsReadOnly => false;
 
-    private Node<T> _head;
-    private Node<T> _tail;
+    private LinkedListNode<T> _head;
+    private LinkedListNode<T> _tail;
 
     public LinkedList()
     {
@@ -28,7 +28,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public void AddLast(T item)
     {
-        var node = new Node<T>(item);
+        var node = new LinkedListNode<T>(item);
         Count++;
         if (_head == null && _tail == null)
         {
@@ -44,7 +44,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public void AddFirst(T item)
     {
-        var node = new Node<T>(item);
+        var node = new LinkedListNode<T>(item);
         Count++;
         node.Next = _head;
         _head = node;
@@ -104,7 +104,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
     public bool Remove(T item)
     {
         var currentNode = _head;
-        Node<T> previous = null;
+        LinkedListNode<T> previous = null;
         while (currentNode != null && item != null)
         {
             if (currentNode.Value != null && currentNode.Value.Equals(item))
@@ -147,24 +147,24 @@ public class LinkedList<T> : ICollection<T>, ICollection
     {
         private readonly LinkedList<T> _linkedList;
         private int _index = -1;
-        private Node<T> _node;
+        private LinkedListNode<T> _linkedListNode;
         private T? _current;
 
         public LinkedListEnumerator(LinkedList<T> list)
         {
             _linkedList = list;
-            _node = list._head;
+            _linkedListNode = list._head;
         }
 
         public bool MoveNext()
         {
-            if (_node == null)
+            if (_linkedListNode == null)
             {
                 return false;
             }
 
-            _current = _node.Value;
-            _node = _node.Next;
+            _current = _linkedListNode.Value;
+            _linkedListNode = _linkedListNode.Next;
             _index++;
             return true;
         }
@@ -172,7 +172,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
         public void Reset()
         {
             _current = default;
-            _node = _linkedList._head;
+            _linkedListNode = _linkedList._head;
             _index = -1;
         }
 
@@ -191,16 +191,16 @@ public class LinkedList<T> : ICollection<T>, ICollection
         {
         }
     }
+}
 
-    public class Node<T>
+public class LinkedListNode<T>
+{
+    public LinkedListNode<T>? Next;
+
+    public T Value;
+
+    public LinkedListNode(T value)
     {
-        public Node<T>? Next;
-
-        public T Value;
-
-        public Node(T value)
-        {
-            Value = value;
-        }
+        Value = value;
     }
 }
