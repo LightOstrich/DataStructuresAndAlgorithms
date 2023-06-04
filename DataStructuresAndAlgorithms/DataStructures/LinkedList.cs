@@ -10,8 +10,8 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public bool IsReadOnly => false;
 
-    public Node<T> Head;
-    public Node<T> Tail;
+    private Node<T> _head;
+    private Node<T> _tail;
 
     public LinkedList()
     {
@@ -23,31 +23,49 @@ public class LinkedList<T> : ICollection<T>, ICollection
     /// <param name="item"></param>
     public void Add(T item)
     {
+        AddLast(item);
+    }
+
+    public void AddLast(T item)
+    {
         var node = new Node<T>(item);
         Count++;
-        if (Head == null && Tail == null)
+        if (_head == null && _tail == null)
         {
-            Head = node;
-            Tail = node;
+            _head = node;
+            _tail = node;
         }
         else
         {
-            Tail.Next = node;
-            Tail = node;
+            _tail.Next = node;
+            _tail = node;
+        }
+    }
+
+    public void AddFirst(T item)
+    {
+        var node = new Node<T>(item);
+        Count++;
+        node.Next = _head;
+        _head = node;
+        if (Count == 0)
+        {
+            _head = node;
+            _tail = node;
         }
     }
 
 
     public void Clear()
     {
-        Head = null;
-        Tail = null;
+        _head = null;
+        _tail = null;
         Count = 0;
     }
 
     public bool Contains(T item)
     {
-        var node = Head;
+        var node = _head;
         if (item == null)
         {
             throw new NullReferenceException();
@@ -68,7 +86,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public void CopyTo(T[]? array, int arrayIndex)
     {
-        var node = Head;
+        var node = _head;
         while (node != null)
         {
             if (array != null) array[arrayIndex++] = node.Value;
@@ -85,7 +103,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
     public bool Remove(T item)
     {
-        var currentNode = Head;
+        var currentNode = _head;
         Node<T> previous = null;
         while (currentNode != null && item != null)
         {
@@ -96,12 +114,12 @@ public class LinkedList<T> : ICollection<T>, ICollection
                     previous.Next = currentNode.Next;
                     if (currentNode.Next == null)
                     {
-                        Tail = previous;
+                        _tail = previous;
                     }
                 }
                 else
                 {
-                    Head = Head?.Next;
+                    _head = _head?.Next;
                 }
 
                 Count--;
@@ -125,7 +143,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
         return GetEnumerator();
     }
 
-    private class LinkedListEnumerator : IEnumerator<T>, IEnumerator
+    private class LinkedListEnumerator : IEnumerator<T>
     {
         private readonly LinkedList<T> _linkedList;
         private int _index = -1;
@@ -135,7 +153,7 @@ public class LinkedList<T> : ICollection<T>, ICollection
         public LinkedListEnumerator(LinkedList<T> list)
         {
             _linkedList = list;
-            _node = list.Head;
+            _node = list._head;
         }
 
         public bool MoveNext()
@@ -154,11 +172,11 @@ public class LinkedList<T> : ICollection<T>, ICollection
         public void Reset()
         {
             _current = default;
-            _node = _linkedList.Head;
+            _node = _linkedList._head;
             _index = -1;
         }
 
-        public T? Current => _current;
+        public T Current => _current;
 
         object? IEnumerator.Current
         {
