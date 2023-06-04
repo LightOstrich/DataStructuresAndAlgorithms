@@ -73,7 +73,8 @@ public class LinkedList<T> : ICollection<T>, ICollection
 
         while (node != null)
         {
-            if (node.Value != null && node.Value.Equals(item))
+            var equality = EqualityComparer<T>.Default;
+            if (node.Value != null && equality.Equals(node.Value, item))
             {
                 return true;
             }
