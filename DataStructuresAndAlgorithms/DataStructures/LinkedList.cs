@@ -191,16 +191,16 @@ public class LinkedList<T> : ICollection<T>, ICollection
         {
         }
     }
-}
 
-public class Node<T>
-{
-    public Node<T>? Next;
-
-    public T Value;
-
-    public Node(T value)
+    public class Node<T>
     {
-        Value = value;
+        public Node<T>? Next;
+
+        public T Value;
+
+        public Node(T value)
+        {
+            Value = value;
+        }
     }
 }
