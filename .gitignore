@@ -13,7 +13,9 @@
 x64/
 [Bb]in/
 [Oo]bj/
-
+# Ignore any files in /bin and /obj Folders
+**/bin/*
+**/obj/*
 # Ignore any files in /bin and /obj Folders
 **/bin/*
 **/obj/*
