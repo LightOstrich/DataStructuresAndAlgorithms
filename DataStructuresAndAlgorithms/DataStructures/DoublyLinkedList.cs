@@ -4,7 +4,7 @@ namespace DataStructuresAndAlgorithms;
 
 public class DoublyLinkedList<T> : ICollection<T>, ICollection
 {
-    public int Count { get; set; }
+    public int Count { get; private set; }
     public bool IsSynchronized => false;
     public object SyncRoot => this;
     public bool IsReadOnly => false;
@@ -16,6 +16,10 @@ public class DoublyLinkedList<T> : ICollection<T>, ICollection
 
     public DoublyLinkedListNode<T>? Last => _tail;
 
+    /// <summary>
+    /// Adds a node to the end of the DoublyLinkedList
+    /// </summary>
+    /// <param name="item"></param>
     public void Add(T item)
     {
         AddLast(item);

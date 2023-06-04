@@ -108,7 +108,8 @@ public class LinkedList<T> : ICollection<T>, ICollection
         LinkedListNode<T> previous = null;
         while (currentNode != null && item != null)
         {
-            if (currentNode.Value != null && currentNode.Value.Equals(item))
+            var equality = EqualityComparer<T>.Default;
+            if (currentNode.Value != null && equality.Equals(currentNode.Value, item))
             {
                 if (previous != null)
                 {
