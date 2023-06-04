@@ -2,9 +2,10 @@ namespace DataStructuresAndAlgorithms;
 
 public class DoublyLinkedList
 {
-    public class Node<T>
-    {
     
-    }
+}
+public class DoublyLinkedListNode<T>
+{
+    
 }
 
