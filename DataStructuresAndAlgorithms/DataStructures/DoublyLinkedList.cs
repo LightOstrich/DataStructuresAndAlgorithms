@@ -20,7 +20,7 @@ public class DoublyLinkedList<T> : ICollection<T>, ICollection
     /// Adds a node to the end of the DoublyLinkedList
     /// </summary>
     /// <param name="item"></param>
-    public void Add(T item)
+    void ICollection<T>.Add(T item)
     {
         AddLast(item);
     }
@@ -44,6 +44,7 @@ public class DoublyLinkedList<T> : ICollection<T>, ICollection
     {
         _head = null;
         _tail = null;
+        Count = 0;
     }
 
     public bool Contains(T item)
